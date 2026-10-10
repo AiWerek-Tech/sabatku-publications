@@ -1,0 +1,11 @@
+{
+  "sourceRepository": "https://github.com/AiWerek-Tech/sabatku-contracts",
+  "sourcePaths": {
+    "digital-content.schema.json": "schemas/v1/domains/digital-content.schema.json",
+    "library-taxonomy.v1.json": "registries/library-taxonomy.v1.json"
+  },
+  "files": {
+    "digital-content.schema.json": "557d16183d013c34222ed6b42b7fc56c07ee91a252c9d2ace1f2b0f1df8fc1a0",
+    "library-taxonomy.v1.json": "56ced86cca6287b8222b1550d7f29c66acace280ac685b0f99249415d4117d29"
+  }
+}

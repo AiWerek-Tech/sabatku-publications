@@ -1,0 +1,742 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://contracts.sabatku.org/schemas/v1/domains/digital-content.schema.json",
+  "title": "SabatKu digital content foundation v1",
+  "oneOf": [
+    {
+      "$ref": "#/$defs/work"
+    },
+    {
+      "$ref": "#/$defs/edition"
+    },
+    {
+      "$ref": "#/$defs/provider"
+    },
+    {
+      "$ref": "#/$defs/publication"
+    },
+    {
+      "$ref": "#/$defs/reading-plan"
+    },
+    {
+      "$ref": "#/$defs/taxonomy"
+    }
+  ],
+  "$defs": {
+    "work": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "const": "work"
+        },
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9:._-]*$"
+        },
+        "key": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9-]*$"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "author": {
+          "type": "string",
+          "minLength": 1
+        },
+        "externalIdentifiers": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "providerId": {
+                "type": "string",
+                "pattern": "^[a-z0-9][a-z0-9:._-]*$"
+              },
+              "value": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "providerId",
+              "value"
+            ]
+          }
+        },
+        "relationships": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "type": {
+                "enum": [
+                  "adaptationOf",
+                  "abridgementOf",
+                  "compilationOf"
+                ]
+              },
+              "workId": {
+                "type": "string",
+                "pattern": "^[a-z0-9][a-z0-9:._-]*$"
+              }
+            },
+            "required": [
+              "type",
+              "workId"
+            ]
+          }
+        }
+      },
+      "required": [
+        "kind",
+        "id",
+        "key",
+        "title",
+        "author"
+      ]
+    },
+    "edition": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "const": "edition"
+        },
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9:._-]*$"
+        },
+        "key": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9-]*$"
+        },
+        "workId": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9:._-]*$"
+        },
+        "locale": {
+          "type": "string",
+          "pattern": "^[a-z]{2,3}(?:-[A-Za-z0-9]{2,8})*$"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "revision": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9-]*$"
+        },
+        "status": {
+          "enum": [
+            "draft",
+            "review",
+            "approved",
+            "published",
+            "withdrawn"
+          ]
+        },
+        "rights": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "status": {
+              "enum": [
+                "needs-review",
+                "verified",
+                "public-domain",
+                "restricted"
+              ]
+            },
+            "attribution": {
+              "type": "string",
+              "minLength": 1
+            },
+            "offlineAllowed": {
+              "type": "boolean"
+            },
+            "permissionNote": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "status",
+            "attribution",
+            "offlineAllowed"
+          ]
+        },
+        "primaryThemeId": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9:._-]*$"
+        },
+        "themeIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z0-9][a-z0-9:._-]*$"
+          }
+        },
+        "collectionIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z0-9][a-z0-9:._-]*$"
+          }
+        },
+        "audienceIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z0-9][a-z0-9:._-]*$"
+          }
+        },
+        "sourceUrl": {
+          "type": "string",
+          "format": "uri",
+          "pattern": "^https://"
+        },
+        "cover": {
+          "type": "string",
+          "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.(?:/|$))[a-zA-Z0-9_./-]+$"
+        },
+        "nodes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[a-z0-9][a-z0-9:._-]*$"
+              },
+              "title": {
+                "type": "string",
+                "minLength": 1
+              },
+              "parentId": {
+                "type": "string",
+                "pattern": "^[a-z0-9][a-z0-9:._-]*$"
+              },
+              "order": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "file": {
+                "type": "string",
+                "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.(?:/|$))[a-zA-Z0-9_./-]+$"
+              },
+              "blocks": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "pattern": "^[a-z0-9][a-z0-9:._-]*$"
+                    },
+                    "type": {
+                      "enum": [
+                        "heading",
+                        "paragraph",
+                        "quote",
+                        "list",
+                        "image",
+                        "callout",
+                        "footnote"
+                      ]
+                    },
+                    "text": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "level": {
+                      "type": "integer",
+                      "minimum": 1,
+                      "maximum": 6
+                    },
+                    "items": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "minLength": 1
+                      }
+                    },
+                    "assetId": {
+                      "type": "string",
+                      "pattern": "^[a-z0-9][a-z0-9:._-]*$"
+                    },
+                    "references": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "properties": {
+                          "literal": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "target": {
+                            "type": "object",
+                            "additionalProperties": false,
+                            "properties": {
+                              "editionId": {
+                                "type": "string",
+                                "pattern": "^[a-z0-9][a-z0-9:._-]*$"
+                              },
+                              "nodeId": {
+                                "type": "string",
+                                "pattern": "^[a-z0-9][a-z0-9:._-]*$"
+                              },
+                              "startBlock": {
+                                "type": "string",
+                                "pattern": "^[a-z0-9][a-z0-9:._-]*$"
+                              },
+                              "endBlock": {
+                                "type": "string",
+                                "pattern": "^[a-z0-9][a-z0-9:._-]*$"
+                              }
+                            },
+                            "required": [
+                              "editionId",
+                              "nodeId"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "literal",
+                          "target"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "type"
+                  ]
+                }
+              }
+            },
+            "required": [
+              "id",
+              "title",
+              "order",
+              "file"
+            ]
+          }
+        }
+      },
+      "required": [
+        "kind",
+        "id",
+        "key",
+        "workId",
+        "locale",
+        "title",
+        "revision",
+        "status",
+        "rights",
+        "primaryThemeId",
+        "themeIds",
+        "collectionIds",
+        "audienceIds",
+        "nodes"
+      ]
+    },
+    "provider": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "const": "provider"
+        },
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9:._-]*$"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "canonicalUrl": {
+          "type": "string",
+          "format": "uri",
+          "pattern": "^https://"
+        },
+        "status": {
+          "enum": [
+            "candidate",
+            "verified",
+            "disabled"
+          ]
+        },
+        "verificationNote": {
+          "type": "string",
+          "minLength": 1
+        },
+        "verifiedAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "contentModes": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "external-link",
+              "approved-summary",
+              "licensed-fulltext"
+            ]
+          },
+          "uniqueItems": true,
+          "minItems": 1
+        }
+      },
+      "required": [
+        "kind",
+        "id",
+        "name",
+        "canonicalUrl",
+        "status",
+        "contentModes"
+      ]
+    },
+    "publication": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "const": "publication"
+        },
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9:._-]*$"
+        },
+        "key": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9-]*$"
+        },
+        "providerId": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9:._-]*$"
+        },
+        "type": {
+          "enum": [
+            "news",
+            "article",
+            "editorial",
+            "commentary",
+            "feature",
+            "press-release"
+          ]
+        },
+        "locale": {
+          "type": "string",
+          "pattern": "^[a-z]{2,3}(?:-[A-Za-z0-9]{2,8})*$"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "canonicalUrl": {
+          "type": "string",
+          "format": "uri",
+          "pattern": "^https://"
+        },
+        "publishedAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "revision": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9-]*$"
+        },
+        "status": {
+          "enum": [
+            "draft",
+            "review",
+            "approved",
+            "published",
+            "withdrawn"
+          ]
+        },
+        "contentMode": {
+          "enum": [
+            "external-link",
+            "approved-summary",
+            "licensed-fulltext"
+          ]
+        },
+        "rights": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "status": {
+              "enum": [
+                "needs-review",
+                "verified",
+                "public-domain",
+                "restricted"
+              ]
+            },
+            "attribution": {
+              "type": "string",
+              "minLength": 1
+            },
+            "offlineAllowed": {
+              "type": "boolean"
+            },
+            "permissionNote": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "status",
+            "attribution",
+            "offlineAllowed"
+          ]
+        },
+        "themeIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z0-9][a-z0-9:._-]*$"
+          }
+        },
+        "summary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "body": {
+          "type": "string",
+          "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.(?:/|$))[a-zA-Z0-9_./-]+$"
+        },
+        "originalItemId": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9:._-]*$"
+        },
+        "regionId": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9:._-]*$"
+        }
+      },
+      "required": [
+        "kind",
+        "id",
+        "key",
+        "providerId",
+        "type",
+        "locale",
+        "title",
+        "canonicalUrl",
+        "publishedAt",
+        "revision",
+        "status",
+        "contentMode",
+        "rights",
+        "themeIds"
+      ]
+    },
+    "reading-plan": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "const": "reading-plan"
+        },
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9:._-]*$"
+        },
+        "programId": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9:._-]*$"
+        },
+        "editionId": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9:._-]*$"
+        },
+        "lessonId": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9:._-]*$"
+        },
+        "targets": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "editionId": {
+                "type": "string",
+                "pattern": "^[a-z0-9][a-z0-9:._-]*$"
+              },
+              "nodeId": {
+                "type": "string",
+                "pattern": "^[a-z0-9][a-z0-9:._-]*$"
+              },
+              "startBlock": {
+                "type": "string",
+                "pattern": "^[a-z0-9][a-z0-9:._-]*$"
+              },
+              "endBlock": {
+                "type": "string",
+                "pattern": "^[a-z0-9][a-z0-9:._-]*$"
+              }
+            },
+            "required": [
+              "editionId",
+              "nodeId"
+            ]
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "kind",
+        "id",
+        "programId",
+        "editionId",
+        "lessonId",
+        "targets"
+      ]
+    },
+    "taxonomy": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "const": "taxonomy"
+        },
+        "version": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9-]*$"
+        },
+        "themes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[a-z0-9][a-z0-9:._-]*$"
+              },
+              "label": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "en": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                },
+                "required": [
+                  "id",
+                  "en"
+                ]
+              },
+              "parentId": {
+                "type": "string",
+                "pattern": "^[a-z0-9][a-z0-9:._-]*$"
+              }
+            },
+            "required": [
+              "id",
+              "label"
+            ]
+          }
+        },
+        "collections": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[a-z0-9][a-z0-9:._-]*$"
+              },
+              "label": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "en": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                },
+                "required": [
+                  "id",
+                  "en"
+                ]
+              }
+            },
+            "required": [
+              "id",
+              "label"
+            ]
+          }
+        },
+        "audiences": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[a-z0-9][a-z0-9:._-]*$"
+              },
+              "label": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "en": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                },
+                "required": [
+                  "id",
+                  "en"
+                ]
+              }
+            },
+            "required": [
+              "id",
+              "label"
+            ]
+          }
+        }
+      },
+      "required": [
+        "kind",
+        "version",
+        "themes",
+        "collections",
+        "audiences"
+      ]
+    }
+  }
+}

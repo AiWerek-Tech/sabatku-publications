@@ -1,0 +1,743 @@
+{
+  "kind": "taxonomy",
+  "version": "v1",
+  "themes": [
+    {
+      "id": "biblical-studies",
+      "label": {
+        "id": "Studi Alkitab",
+        "en": "Biblical Studies"
+      }
+    },
+    {
+      "id": "theology-beliefs",
+      "label": {
+        "id": "Teologi dan Keyakinan",
+        "en": "Theology and Beliefs"
+      }
+    },
+    {
+      "id": "prophecy-eschatology",
+      "label": {
+        "id": "Nubuat dan Akhir Zaman",
+        "en": "Prophecy and Eschatology"
+      }
+    },
+    {
+      "id": "spiritual-growth",
+      "label": {
+        "id": "Kehidupan Kristen dan Pertumbuhan Rohani",
+        "en": "Christian Living and Spiritual Growth"
+      }
+    },
+    {
+      "id": "prayer-worship",
+      "label": {
+        "id": "Doa dan Ibadah",
+        "en": "Prayer and Worship"
+      }
+    },
+    {
+      "id": "devotionals",
+      "label": {
+        "id": "Renungan dan Meditasi",
+        "en": "Devotionals"
+      }
+    },
+    {
+      "id": "family-relationships",
+      "label": {
+        "id": "Keluarga dan Relasi",
+        "en": "Family and Relationships"
+      }
+    },
+    {
+      "id": "health-wellbeing",
+      "label": {
+        "id": "Kesehatan dan Kesejahteraan",
+        "en": "Health and Wellbeing"
+      }
+    },
+    {
+      "id": "nutrition-cooking",
+      "label": {
+        "id": "Gizi dan Masakan",
+        "en": "Nutrition and Cooking"
+      }
+    },
+    {
+      "id": "education-development",
+      "label": {
+        "id": "Pendidikan dan Pengembangan Diri",
+        "en": "Education and Development"
+      }
+    },
+    {
+      "id": "mission-evangelism",
+      "label": {
+        "id": "Misi dan Penginjilan",
+        "en": "Mission and Evangelism"
+      }
+    },
+    {
+      "id": "ministry-leadership",
+      "label": {
+        "id": "Pelayanan dan Kepemimpinan",
+        "en": "Ministry and Leadership"
+      }
+    },
+    {
+      "id": "church-governance",
+      "label": {
+        "id": "Tata Gereja dan Organisasi",
+        "en": "Church Governance"
+      }
+    },
+    {
+      "id": "history-biography",
+      "label": {
+        "id": "Sejarah dan Biografi",
+        "en": "History and Biography"
+      }
+    },
+    {
+      "id": "stories-testimonies",
+      "label": {
+        "id": "Cerita dan Kesaksian",
+        "en": "Stories and Testimonies"
+      }
+    },
+    {
+      "id": "creation-arts-culture",
+      "label": {
+        "id": "Penciptaan, Seni, dan Budaya",
+        "en": "Creation, Arts and Culture"
+      }
+    },
+    {
+      "id": "biblical-studies:study-guides",
+      "parentId": "biblical-studies",
+      "label": {
+        "id": "Panduan Belajar",
+        "en": "Study Guides"
+      }
+    },
+    {
+      "id": "biblical-studies:commentaries",
+      "parentId": "biblical-studies",
+      "label": {
+        "id": "Tafsir dan Komentar",
+        "en": "Commentaries"
+      }
+    },
+    {
+      "id": "biblical-studies:concordances-dictionaries",
+      "parentId": "biblical-studies",
+      "label": {
+        "id": "Konkordansi dan Kamus",
+        "en": "Concordances Dictionaries"
+      }
+    },
+    {
+      "id": "biblical-studies:bible-background",
+      "parentId": "biblical-studies",
+      "label": {
+        "id": "Latar Sejarah dan Budaya",
+        "en": "Bible Background"
+      }
+    },
+    {
+      "id": "biblical-studies:study-methods",
+      "parentId": "biblical-studies",
+      "label": {
+        "id": "Metode Mempelajari Alkitab",
+        "en": "Study Methods"
+      }
+    },
+    {
+      "id": "theology-beliefs:fundamental-beliefs",
+      "parentId": "theology-beliefs",
+      "label": {
+        "id": "28 Keyakinan Dasar",
+        "en": "Fundamental Beliefs"
+      }
+    },
+    {
+      "id": "theology-beliefs:salvation",
+      "parentId": "theology-beliefs",
+      "label": {
+        "id": "Keselamatan",
+        "en": "Salvation"
+      }
+    },
+    {
+      "id": "theology-beliefs:god-christ",
+      "parentId": "theology-beliefs",
+      "label": {
+        "id": "Allah dan Kristus",
+        "en": "God Christ"
+      }
+    },
+    {
+      "id": "theology-beliefs:church-ordinances",
+      "parentId": "theology-beliefs",
+      "label": {
+        "id": "Gereja dan Sakramen",
+        "en": "Church Ordinances"
+      }
+    },
+    {
+      "id": "theology-beliefs:apologetics",
+      "parentId": "theology-beliefs",
+      "label": {
+        "id": "Apologetika",
+        "en": "Apologetics"
+      }
+    },
+    {
+      "id": "prophecy-eschatology:daniel",
+      "parentId": "prophecy-eschatology",
+      "label": {
+        "id": "Daniel",
+        "en": "Daniel"
+      }
+    },
+    {
+      "id": "prophecy-eschatology:revelation",
+      "parentId": "prophecy-eschatology",
+      "label": {
+        "id": "Wahyu",
+        "en": "Revelation"
+      }
+    },
+    {
+      "id": "prophecy-eschatology:second-coming",
+      "parentId": "prophecy-eschatology",
+      "label": {
+        "id": "Kedatangan Kristus",
+        "en": "Second Coming"
+      }
+    },
+    {
+      "id": "prophecy-eschatology:judgment-sanctuary",
+      "parentId": "prophecy-eschatology",
+      "label": {
+        "id": "Penghakiman dan Bait Suci",
+        "en": "Judgment Sanctuary"
+      }
+    },
+    {
+      "id": "spiritual-growth:discipleship",
+      "parentId": "spiritual-growth",
+      "label": {
+        "id": "Pemuridan",
+        "en": "Discipleship"
+      }
+    },
+    {
+      "id": "spiritual-growth:character-ethics",
+      "parentId": "spiritual-growth",
+      "label": {
+        "id": "Karakter dan Etika",
+        "en": "Character Ethics"
+      }
+    },
+    {
+      "id": "spiritual-growth:faith-struggles",
+      "parentId": "spiritual-growth",
+      "label": {
+        "id": "Iman dan Pergumulan",
+        "en": "Faith Struggles"
+      }
+    },
+    {
+      "id": "spiritual-growth:personal-stewardship",
+      "parentId": "spiritual-growth",
+      "label": {
+        "id": "Penatalayanan Pribadi",
+        "en": "Personal Stewardship"
+      }
+    },
+    {
+      "id": "prayer-worship:personal-prayer",
+      "parentId": "prayer-worship",
+      "label": {
+        "id": "Doa Pribadi",
+        "en": "Personal Prayer"
+      }
+    },
+    {
+      "id": "prayer-worship:family-worship",
+      "parentId": "prayer-worship",
+      "label": {
+        "id": "Ibadah Keluarga",
+        "en": "Family Worship"
+      }
+    },
+    {
+      "id": "prayer-worship:church-worship",
+      "parentId": "prayer-worship",
+      "label": {
+        "id": "Ibadah Jemaat",
+        "en": "Church Worship"
+      }
+    },
+    {
+      "id": "prayer-worship:revival",
+      "parentId": "prayer-worship",
+      "label": {
+        "id": "Kebangunan Rohani",
+        "en": "Revival"
+      }
+    },
+    {
+      "id": "devotionals:daily-devotionals",
+      "parentId": "devotionals",
+      "label": {
+        "id": "Renungan Harian",
+        "en": "Daily Devotionals"
+      }
+    },
+    {
+      "id": "devotionals:thematic-devotionals",
+      "parentId": "devotionals",
+      "label": {
+        "id": "Renungan Tematis",
+        "en": "Thematic Devotionals"
+      }
+    },
+    {
+      "id": "devotionals:family-devotionals",
+      "parentId": "devotionals",
+      "label": {
+        "id": "Renungan Keluarga",
+        "en": "Family Devotionals"
+      }
+    },
+    {
+      "id": "devotionals:sabbath-devotionals",
+      "parentId": "devotionals",
+      "label": {
+        "id": "Renungan Sabat",
+        "en": "Sabbath Devotionals"
+      }
+    },
+    {
+      "id": "family-relationships:marriage",
+      "parentId": "family-relationships",
+      "label": {
+        "id": "Pernikahan",
+        "en": "Marriage"
+      }
+    },
+    {
+      "id": "family-relationships:parenting",
+      "parentId": "family-relationships",
+      "label": {
+        "id": "Pengasuhan Anak",
+        "en": "Parenting"
+      }
+    },
+    {
+      "id": "family-relationships:friendship",
+      "parentId": "family-relationships",
+      "label": {
+        "id": "Relasi dan Persahabatan",
+        "en": "Friendship"
+      }
+    },
+    {
+      "id": "family-relationships:family-care",
+      "parentId": "family-relationships",
+      "label": {
+        "id": "Perawatan Keluarga",
+        "en": "Family Care"
+      }
+    },
+    {
+      "id": "health-wellbeing:healthy-living",
+      "parentId": "health-wellbeing",
+      "label": {
+        "id": "Gaya Hidup Sehat",
+        "en": "Healthy Living"
+      }
+    },
+    {
+      "id": "health-wellbeing:mental-health",
+      "parentId": "health-wellbeing",
+      "label": {
+        "id": "Kesehatan Mental",
+        "en": "Mental Health"
+      }
+    },
+    {
+      "id": "health-wellbeing:prevention-recovery",
+      "parentId": "health-wellbeing",
+      "label": {
+        "id": "Pencegahan dan Pemulihan",
+        "en": "Prevention Recovery"
+      }
+    },
+    {
+      "id": "health-wellbeing:health-ministry",
+      "parentId": "health-wellbeing",
+      "label": {
+        "id": "Pelayanan Kesehatan",
+        "en": "Health Ministry"
+      }
+    },
+    {
+      "id": "nutrition-cooking:balanced-nutrition",
+      "parentId": "nutrition-cooking",
+      "label": {
+        "id": "Gizi Seimbang",
+        "en": "Balanced Nutrition"
+      }
+    },
+    {
+      "id": "nutrition-cooking:plant-based-cooking",
+      "parentId": "nutrition-cooking",
+      "label": {
+        "id": "Masakan Nabati",
+        "en": "Plant Based Cooking"
+      }
+    },
+    {
+      "id": "nutrition-cooking:practical-recipes",
+      "parentId": "nutrition-cooking",
+      "label": {
+        "id": "Resep Praktis",
+        "en": "Practical Recipes"
+      }
+    },
+    {
+      "id": "nutrition-cooking:food-education",
+      "parentId": "nutrition-cooking",
+      "label": {
+        "id": "Pendidikan Pangan",
+        "en": "Food Education"
+      }
+    },
+    {
+      "id": "education-development:christian-education",
+      "parentId": "education-development",
+      "label": {
+        "id": "Pendidikan Kristen",
+        "en": "Christian Education"
+      }
+    },
+    {
+      "id": "education-development:teaching-learning",
+      "parentId": "education-development",
+      "label": {
+        "id": "Pembelajaran dan Pengajaran",
+        "en": "Teaching Learning"
+      }
+    },
+    {
+      "id": "education-development:character-development",
+      "parentId": "education-development",
+      "label": {
+        "id": "Pengembangan Karakter",
+        "en": "Character Development"
+      }
+    },
+    {
+      "id": "education-development:study-career",
+      "parentId": "education-development",
+      "label": {
+        "id": "Studi dan Karier",
+        "en": "Study Career"
+      }
+    },
+    {
+      "id": "mission-evangelism:personal-witness",
+      "parentId": "mission-evangelism",
+      "label": {
+        "id": "Kesaksian Pribadi",
+        "en": "Personal Witness"
+      }
+    },
+    {
+      "id": "mission-evangelism:public-evangelism",
+      "parentId": "mission-evangelism",
+      "label": {
+        "id": "Penginjilan Publik",
+        "en": "Public Evangelism"
+      }
+    },
+    {
+      "id": "mission-evangelism:cross-cultural-mission",
+      "parentId": "mission-evangelism",
+      "label": {
+        "id": "Misi Lintas Budaya",
+        "en": "Cross Cultural Mission"
+      }
+    },
+    {
+      "id": "mission-evangelism:literature-evangelism",
+      "parentId": "mission-evangelism",
+      "label": {
+        "id": "Penginjilan Literatur",
+        "en": "Literature Evangelism"
+      }
+    },
+    {
+      "id": "mission-evangelism:small-groups",
+      "parentId": "mission-evangelism",
+      "label": {
+        "id": "Kelompok Kecil",
+        "en": "Small Groups"
+      }
+    },
+    {
+      "id": "ministry-leadership:preaching",
+      "parentId": "ministry-leadership",
+      "label": {
+        "id": "Khotbah dan Homiletika",
+        "en": "Preaching"
+      }
+    },
+    {
+      "id": "ministry-leadership:pastoral-ministry",
+      "parentId": "ministry-leadership",
+      "label": {
+        "id": "Pelayanan Pastoral",
+        "en": "Pastoral Ministry"
+      }
+    },
+    {
+      "id": "ministry-leadership:leadership",
+      "parentId": "ministry-leadership",
+      "label": {
+        "id": "Kepemimpinan",
+        "en": "Leadership"
+      }
+    },
+    {
+      "id": "ministry-leadership:department-ministry",
+      "parentId": "ministry-leadership",
+      "label": {
+        "id": "Pelayanan Departemen",
+        "en": "Department Ministry"
+      }
+    },
+    {
+      "id": "ministry-leadership:teacher-training",
+      "parentId": "ministry-leadership",
+      "label": {
+        "id": "Pelatihan Guru",
+        "en": "Teacher Training"
+      }
+    },
+    {
+      "id": "church-governance:church-manual",
+      "parentId": "church-governance",
+      "label": {
+        "id": "Peraturan Jemaat",
+        "en": "Church Manual"
+      }
+    },
+    {
+      "id": "church-governance:policies-guidelines",
+      "parentId": "church-governance",
+      "label": {
+        "id": "Kebijakan dan Pedoman",
+        "en": "Policies Guidelines"
+      }
+    },
+    {
+      "id": "church-governance:church-officers",
+      "parentId": "church-governance",
+      "label": {
+        "id": "Tugas Pejabat Jemaat",
+        "en": "Church Officers"
+      }
+    },
+    {
+      "id": "church-governance:administration-stewardship",
+      "parentId": "church-governance",
+      "label": {
+        "id": "Administrasi dan Penatalayanan",
+        "en": "Administration Stewardship"
+      }
+    },
+    {
+      "id": "history-biography:adventist-history",
+      "parentId": "history-biography",
+      "label": {
+        "id": "Sejarah Advent",
+        "en": "Adventist History"
+      }
+    },
+    {
+      "id": "history-biography:christian-history",
+      "parentId": "history-biography",
+      "label": {
+        "id": "Sejarah Kekristenan",
+        "en": "Christian History"
+      }
+    },
+    {
+      "id": "history-biography:biography",
+      "parentId": "history-biography",
+      "label": {
+        "id": "Biografi",
+        "en": "Biography"
+      }
+    },
+    {
+      "id": "history-biography:heritage-documents",
+      "parentId": "history-biography",
+      "label": {
+        "id": "Warisan dan Dokumen Sejarah",
+        "en": "Heritage Documents"
+      }
+    },
+    {
+      "id": "stories-testimonies:bible-stories",
+      "parentId": "stories-testimonies",
+      "label": {
+        "id": "Kisah Alkitab",
+        "en": "Bible Stories"
+      }
+    },
+    {
+      "id": "stories-testimonies:mission-stories",
+      "parentId": "stories-testimonies",
+      "label": {
+        "id": "Kisah Misi",
+        "en": "Mission Stories"
+      }
+    },
+    {
+      "id": "stories-testimonies:life-testimonies",
+      "parentId": "stories-testimonies",
+      "label": {
+        "id": "Kesaksian Hidup",
+        "en": "Life Testimonies"
+      }
+    },
+    {
+      "id": "stories-testimonies:formation-stories",
+      "parentId": "stories-testimonies",
+      "label": {
+        "id": "Cerita Pembinaan",
+        "en": "Formation Stories"
+      }
+    },
+    {
+      "id": "creation-arts-culture:creation-nature",
+      "parentId": "creation-arts-culture",
+      "label": {
+        "id": "Penciptaan dan Alam",
+        "en": "Creation Nature"
+      }
+    },
+    {
+      "id": "creation-arts-culture:faith-science",
+      "parentId": "creation-arts-culture",
+      "label": {
+        "id": "Iman dan Sains",
+        "en": "Faith Science"
+      }
+    },
+    {
+      "id": "creation-arts-culture:music-hymnals",
+      "parentId": "creation-arts-culture",
+      "label": {
+        "id": "Musik dan Buku Nyanyian",
+        "en": "Music Hymnals"
+      }
+    },
+    {
+      "id": "creation-arts-culture:arts-media-culture",
+      "parentId": "creation-arts-culture",
+      "label": {
+        "id": "Seni Media dan Budaya",
+        "en": "Arts Media Culture"
+      }
+    }
+  ],
+  "collections": [
+    {
+      "id": "egw-writings",
+      "label": {
+        "id": "Roh Nubuat",
+        "en": "EGW Writings"
+      }
+    },
+    {
+      "id": "conflict-of-the-ages",
+      "label": {
+        "id": "Conflict of the Ages",
+        "en": "Conflict of the Ages"
+      }
+    },
+    {
+      "id": "young-reader-adaptations",
+      "label": {
+        "id": "Adaptasi Pembaca Muda",
+        "en": "Young Reader Adaptations"
+      }
+    },
+    {
+      "id": "sabbath-school-companions",
+      "label": {
+        "id": "Buku Pendamping Sekolah Sabat",
+        "en": "Sabbath School Companions"
+      }
+    },
+    {
+      "id": "official-church-guides",
+      "label": {
+        "id": "Pedoman Resmi Gereja",
+        "en": "Official Church Guides"
+      }
+    }
+  ],
+  "audiences": [
+    {
+      "id": "all",
+      "label": {
+        "id": "Semua Pembaca",
+        "en": "All Readers"
+      }
+    },
+    {
+      "id": "children",
+      "label": {
+        "id": "Anak-anak",
+        "en": "Children"
+      }
+    },
+    {
+      "id": "teens",
+      "label": {
+        "id": "Remaja",
+        "en": "Teens"
+      }
+    },
+    {
+      "id": "young-adults",
+      "label": {
+        "id": "Pemuda Dewasa",
+        "en": "Young Adults"
+      }
+    },
+    {
+      "id": "adults",
+      "label": {
+        "id": "Dewasa",
+        "en": "Adults"
+      }
+    },
+    {
+      "id": "teachers-parents",
+      "label": {
+        "id": "Pengajar dan Orang Tua",
+        "en": "Teachers and Parents"
+      }
+    }
+  ]
+}

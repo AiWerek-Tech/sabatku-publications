@@ -1,0 +1,10 @@
+{
+  "kind": "provider",
+  "id": "ann",
+  "name": "Adventist News Network",
+  "canonicalUrl": "https://adventist.news/",
+  "status": "candidate",
+  "contentModes": [
+    "external-link"
+  ]
+}

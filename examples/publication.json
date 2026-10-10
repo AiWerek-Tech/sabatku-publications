@@ -1,0 +1,20 @@
+{
+  "kind": "publication",
+  "id": "publication:example",
+  "key": "example",
+  "providerId": "ann",
+  "type": "news",
+  "locale": "en",
+  "title": "Example only — replace before publication",
+  "canonicalUrl": "https://adventist.news/",
+  "publishedAt": "2026-10-10T00:00:00Z",
+  "revision": "draft-1",
+  "status": "draft",
+  "contentMode": "external-link",
+  "rights": {
+    "status": "needs-review",
+    "attribution": "Adventist News Network",
+    "offlineAllowed": false
+  },
+  "themeIds": []
+}
